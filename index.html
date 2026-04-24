@@ -81,7 +81,7 @@ header {
     color: var(--primary);
 }
 
-/* CTA BUTTONS */
+/* CTA */
 .cta {
     margin-top: 20px;
 }
@@ -188,7 +188,7 @@ h2 {
 }
 
 .job {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     position: relative;
 }
 
@@ -221,20 +221,21 @@ h2 {
     margin-top: 5px;
 }
 
-/* BULLETS */
+/* BULLETS FIXED */
 ul {
     list-style: none;
     padding-left: 0;
+    margin-top: 10px;
 }
 
-li {
+ul li {
     position: relative;
     padding-left: 18px;
     margin-bottom: 8px;
     line-height: 1.5;
 }
 
-li::before {
+ul li::before {
     content: "";
     position: absolute;
     left: 0;
@@ -287,7 +288,7 @@ footer {
         </div>
 
         <div class="cta">
-            <a href="resume.pdf" class="btn-primary">Download Resume</a>
+            <a href="resume.pdf" class="btn-primary" download>Download Resume</a>
             <a href="mailto:saurabhthakur1991@gmail.com" class="btn-outline">Contact Me</a>
         </div>
     </div>
@@ -338,7 +339,7 @@ footer {
         <div class="skill"><strong>DevOps</strong><br>Kubernetes, Docker, Terraform, CI/CD</div>
         <div class="skill"><strong>Observability</strong><br>Datadog, Splunk</div>
         <div class="skill"><strong>Security</strong><br>OAuth2, OpenID</div>
-        <div class="skill"><strong>Leadership</strong><br>Agile, SAFe, Team Leadership</div>
+        <div class="skill"><strong>Leadership</strong><br>Agile, SAFe, Mentoring, Empowerment</div>
     </div>
 </div>
 
@@ -357,7 +358,7 @@ footer {
 
         <div class="job">
             <div class="job-header">
-                <span>Sr Lead Software Engineering</span>
+                <span>Senior Engineering Tech Lead</span>
                 <span>2023–Present</span>
             </div>
             <div class="company">Compass Real Estate</div>
@@ -379,6 +380,20 @@ footer {
             <ul>
                 <li>Built enterprise analytics platform using cloud data services</li>
                 <li>Modernized CI/CD pipelines improving release efficiency</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span>Technical Lead</span>
+                <span>2012–2021</span>
+            </div>
+            <div class="company">Mindtree Ltd.</div>
+            <p class="tech">Tech: .NET, Microservices, Azure, Okta, Payments</p>
+            <ul>
+                <li>Built modern brokerage platform handling end-to-end deal lifecycle</li>
+                <li>Developed real-time payment and earnings tracking systems</li>
+                <li>Led cloud adoption initiatives and mentored engineering teams</li>
             </ul>
         </div>
 
