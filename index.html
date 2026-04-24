@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Saurabh Thakur | Engineering Leader</title>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
 
 <style>
 :root {
@@ -14,10 +14,9 @@
     --accent: #22d3ee;
     --dark: #0f172a;
     --text: #334155;
-    --bg: #f1f5f9;
+    --bg: #f8fafc;
 }
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -30,14 +29,13 @@ body {
     color: var(--text);
 }
 
-/* HEADER */
+/* NAV */
 header {
     position: sticky;
     top: 0;
-    backdrop-filter: blur(12px);
-    background: rgba(255,255,255,0.7);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    z-index: 10;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eee;
 }
 
 .nav {
@@ -46,36 +44,31 @@ header {
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.nav h1 {
-    font-size: 1.2rem;
-    color: var(--dark);
-}
-
-.nav a {
-    margin-left: 15px;
-    text-decoration: none;
-    color: var(--text);
-    font-size: 0.9rem;
 }
 
 /* HERO */
 .hero {
-    background: linear-gradient(135deg, #6366f1, #22d3ee);
-    color: white;
-    padding: 80px 20px 60px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+    gap: 40px;
 }
 
-.hero h2 {
-    font-size: 2.8rem;
+.hero-text {
+    flex: 1;
 }
 
-.hero p {
+.hero-text h1 {
+    font-size: 3rem;
+    color: var(--dark);
+}
+
+.hero-text p {
     margin-top: 10px;
-    opacity: 0.9;
+    font-size: 1.1rem;
 }
 
 .contact {
@@ -83,52 +76,96 @@ header {
 }
 
 .contact a {
-    margin: 0 10px;
-    color: white;
+    margin-right: 12px;
     font-size: 1.2rem;
+    color: var(--primary);
 }
 
-/* CONTAINER */
+/* CTA BUTTONS */
+.cta {
+    margin-top: 20px;
+}
+
+.cta a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-outline {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+/* PROFILE IMAGE */
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #6366f1, #22d3ee) border-box;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* SECTION */
 .container {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
 }
 
-/* CARD */
 .card {
-    background: rgba(255,255,255,0.75);
-    backdrop-filter: blur(10px);
+    background: white;
     padding: 25px;
-    border-radius: 14px;
     margin-top: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    animation: fadeIn 0.6s ease;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.2s ease;
 }
 
-h3 {
+.card:hover {
+    transform: translateY(-3px);
+}
+
+h2 {
     margin-bottom: 15px;
     color: var(--dark);
 }
 
-/* METRICS */
-.metrics {
+/* IMPACT */
+.impact {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
-    gap: 15px;
-    margin-top: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 20px;
 }
 
-.metric {
+.impact div {
     background: linear-gradient(135deg, #6366f1, #22d3ee);
     color: white;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 12px;
     text-align: center;
 }
 
-.metric h4 {
-    font-size: 1.4rem;
+.impact h3 {
+    margin: 0;
+    font-size: 1.8rem;
 }
 
 /* SKILLS */
@@ -139,19 +176,14 @@ h3 {
 }
 
 .skill {
-    background: #f8fafc;
+    background: #f1f5f9;
     padding: 15px;
     border-radius: 10px;
-    transition: 0.3s;
-}
-
-.skill:hover {
-    transform: translateY(-5px);
 }
 
 /* TIMELINE */
 .timeline {
-    border-left: 3px solid #e2e8f0;
+    border-left: 2px solid #e2e8f0;
     padding-left: 20px;
 }
 
@@ -163,10 +195,10 @@ h3 {
 .job::before {
     content: "";
     position: absolute;
-    left: -11px;
+    left: -9px;
     top: 5px;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background: var(--primary);
     border-radius: 50%;
 }
@@ -179,43 +211,56 @@ h3 {
 
 .company {
     color: var(--primary);
-    font-style: italic;
     margin: 5px 0;
+    font-style: italic;
 }
 
+.tech {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 5px;
+}
+
+/* BULLETS */
 ul {
-    padding-left: 18px;
+    list-style: none;
+    padding-left: 0;
 }
 
 li {
-    margin-bottom: 6px;
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    line-height: 1.5;
 }
 
-/* CERTS */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(135deg, #6366f1, #22d3ee);
+    border-radius: 50%;
 }
 
-.tag {
-    background: var(--dark);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
 }
 
-/* ANIMATION */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+/* RESPONSIVE */
+@media(max-width: 800px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
 
-/* MOBILE */
-@media(max-width:600px){
-    .hero h2 {
-        font-size: 2rem;
+    .hero-text h1 {
+        font-size: 2.2rem;
     }
 }
 </style>
@@ -225,65 +270,89 @@ li {
 
 <header>
     <div class="nav">
-        <h1>Saurabh Thakur</h1>
-        <div>
-            <a href="#">About</a>
-            <a href="#">Experience</a>
-            <a href="#">Skills</a>
-        </div>
+        <strong>Saurabh Thakur</strong>
     </div>
 </header>
 
 <section class="hero">
-    <h2>Engineering Leader</h2>
-    <p>AI • Cloud • Scalable Systems</p>
 
-    <div class="contact">
-        <a href="mailto:saurabhthakur1991@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://linkedin.com/in/sthakur03"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/saurabhvik"><i class="fab fa-github"></i></a>
+    <div class="hero-text">
+        <h1>Saurabh Thakur</h1>
+        <p>Engineering Leader building AI-driven, scalable platforms and leading high-performing global teams</p>
+
+        <div class="contact">
+            <a href="mailto:saurabh.thakur03@outlook.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/sthakur03"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/saurabhvik"><i class="fab fa-github"></i></a>
+        </div>
+
+        <div class="cta">
+            <a href="resume.pdf" class="btn-primary">Download Resume</a>
+            <a href="mailto:saurabh.thakur03@outlook.com" class="btn-outline">Contact Me</a>
+        </div>
     </div>
+
+    <div class="hero-img">
+        <img src="profile.png" alt="Saurabh Thakur profile photo" class="profile-pic">
+    </div>
+
 </section>
 
 <div class="container">
 
 <div class="card">
-    <h3>Summary</h3>
+    <h2>About</h2>
     <p>
-        Engineering leader with 14+ years building scalable systems, leading global teams,
-        and delivering AI-driven platforms across enterprise environments.
+        Engineering leader with 14+ years of experience building enterprise-scale platforms,
+        leading distributed teams, and delivering AI-powered solutions across cloud ecosystems.
     </p>
+</div>
 
-    <div class="metrics">
-        <div class="metric">
-            <h4>14+</h4>
-            <p>Years</p>
+<div class="card">
+    <h2>Impact</h2>
+    <div class="impact">
+        <div>
+            <h3>14+</h3>
+            <p>Years Experience</p>
         </div>
-        <div class="metric">
-            <h4>$2.6M</h4>
-            <p>Saved</p>
+        <div>
+            <h3>$2.6M+</h3>
+            <p>AI & Cloud Cost Optimization</p>
         </div>
-        <div class="metric">
-            <h4>20+</h4>
-            <p>Engineers</p>
+        <div>
+            <h3>20+</h3>
+            <p>Engineers Led</p>
         </div>
     </div>
 </div>
 
 <div class="card">
-    <h3>Skills</h3>
+    <h2>Skills</h2>
     <div class="skills">
-        <div class="skill"><strong>AI</strong><br>GPT, Claude, AI Agents</div>
-        <div class="skill"><strong>Backend</strong><br>.NET, Python, Node</div>
+        <div class="skill"><strong>AI Engineering</strong><br>LLMs, AI Agents, RAG</div>
+        <div class="skill"><strong>Backend</strong><br>.NET, Python, Node.js</div>
         <div class="skill"><strong>Frontend</strong><br>React, Angular</div>
         <div class="skill"><strong>Cloud</strong><br>AWS, Azure, GCP</div>
-        <div class="skill"><strong>DevOps</strong><br>Kubernetes, Docker</div>
-        <div class="skill"><strong>Architecture</strong><br>Microservices, Kafka</div>
+        <div class="skill"><strong>Architecture</strong><br>Microservices, Event-Driven Systems</div>
+        <div class="skill"><strong>Data & Messaging</strong><br>Kafka, RabbitMQ, SQL, NoSQL</div>
+        <div class="skill"><strong>DevOps</strong><br>Kubernetes, Docker, Terraform, CI/CD</div>
+        <div class="skill"><strong>Observability</strong><br>Datadog, Splunk</div>
+        <div class="skill"><strong>Security</strong><br>OAuth2, OpenID</div>
+        <div class="skill"><strong>Leadership</strong><br>Agile, SAFe, Team Leadership</div>
     </div>
 </div>
 
 <div class="card">
-    <h3>Experience</h3>
+    <h2>AI & Platform Highlights</h2>
+    <ul>
+        <li>Built AI agents integrating multiple enterprise platforms</li>
+        <li>Implemented document extraction using LLMs for automation</li>
+        <li>Designed unified data platforms for real-time business insights</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Experience</h2>
     <div class="timeline">
 
         <div class="job">
@@ -291,11 +360,12 @@ li {
                 <span>Senior Engineering Tech Lead</span>
                 <span>2023–Present</span>
             </div>
-            <div class="company">Compass</div>
+            <div class="company">Compass Real Estate</div>
+            <p class="tech">Tech: Azure, Kafka, OpenAI, Microservices</p>
             <ul>
-                <li>Led 20+ engineers globally</li>
-                <li>Built AI platform saving $2.6M</li>
-                <li>Migrated to serverless cloud</li>
+                <li>Led global engineering team of 20+ across distributed locations</li>
+                <li>Delivered AI-driven platform generating $2.6M+ in cost savings</li>
+                <li>Architected scalable microservices and serverless cloud solutions</li>
             </ul>
         </div>
 
@@ -305,39 +375,21 @@ li {
                 <span>2021–2023</span>
             </div>
             <div class="company">Charles Schwab</div>
+            <p class="tech">Tech: GCP, BigQuery, CI/CD</p>
             <ul>
-                <li>Delivered analytics platform</li>
-                <li>Improved CI/CD pipelines</li>
-            </ul>
-        </div>
-
-        <div class="job">
-            <div class="job-header">
-                <span>Technical Lead</span>
-                <span>2012–2021</span>
-            </div>
-            <div class="company">Mindtree</div>
-            <ul>
-                <li>Built enterprise platforms</li>
-                <li>Mentored engineering teams</li>
+                <li>Built enterprise analytics platform using cloud data services</li>
+                <li>Modernized CI/CD pipelines improving release efficiency</li>
             </ul>
         </div>
 
     </div>
 </div>
 
-<div class="card">
-    <h3>Certifications</h3>
-    <div class="tags">
-        <span class="tag">Azure AI</span>
-        <span class="tag">AWS</span>
-        <span class="tag">GCP</span>
-        <span class="tag">Scrum Master</span>
-        <span class="tag">Copilot</span>
-    </div>
 </div>
 
-</div>
+<footer>
+    © 2026 Saurabh Thakur
+</footer>
 
 </body>
 </html>
