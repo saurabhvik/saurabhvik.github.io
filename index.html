@@ -3,63 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saurabh Thakur | Engineering Leader</title>
+    <title>Saurabh Thakur | Software Engineering Leader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; max-width: 850px; margin: 0 auto; padding: 40px; }
-        header { border-bottom: 3px solid #0078d4; padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { margin: 0; font-size: 2.5rem; color: #222; }
-        .tagline { color: #0078d4; font-weight: bold; font-size: 1.2rem; }
-        .section { margin-top: 30px; }
-        h2 { border-left: 5px solid #0078d4; padding-left: 15px; color: #2c3e50; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .skill-box { background: #f4f7f9; padding: 15px; border-radius: 8px; }
-        ul { padding-left: 20px; }
+        :root { --primary: #0078d4; --secondary: #2c3e50; --bg: #f4f7f9; --text: #333; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; padding: 0; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        header { background: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid var(--primary); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { margin: 0; font-size: 2.5rem; color: var(--secondary); }
+        .subtitle { font-size: 1.2rem; color: var(--primary); font-weight: 600; margin-top: 10px; }
+        .contact-bar { margin-top: 20px; }
+        .contact-bar a { margin: 0 15px; text-decoration: none; color: var(--secondary); font-weight: 500; transition: color 0.3s; }
+        .contact-bar a:hover { color: var(--primary); }
+        
+        section { background: white; padding: 35px; margin-top: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h2 { border-bottom: 2px solid #eee; padding-bottom: 12px; color: var(--primary); margin-top: 0; }
+        
+        .experience-item { margin-bottom: 30px; border-left: 3px solid #eee; padding-left: 20px; }
+        .job-header { display: flex; justify-content: space-between; font-weight: bold; font-size: 1.15rem; flex-wrap: wrap; }
+        .company { color: var(--primary); font-style: italic; margin-bottom: 10px; display: block; }
+        
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .skill-cat { background: #fff; border: 1px solid #e1e8ed; padding: 15px; border-radius: 8px; border-top: 4px solid var(--primary); }
+        
+        .cert-list { display: flex; flex-wrap: wrap; gap: 12px; }
+        .cert-tag { background: var(--secondary); color: white; padding: 10px 18px; border-radius: 25px; font-size: 0.9rem; font-weight: 500; }
+        
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 8px; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Saurabh Thakur</h1>
-    <div class="tagline">Software Engineering Leader | AI & Cloud Architect</div>
-    <p>Plano, TX • <a href="mailto:saurabh.thakur03@outlook.com">Contact</a> • <a href="https://www.linkedin.com/in/sthakur03/">LinkedIn</a></p>
+    <div class="subtitle">Software Engineering Leader | AI & Cloud Architect</div>
+    <div class="contact-bar">
+        <a href="mailto:saurabhthakur1991@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/sthakur03/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/saurabhvik"><i class="fab fa-github"></i> GitHub</a>
+    </div>
 </header>
 
-<section class="section">
-    <h2>Professional Summary</h2>
-    <p>Engineering Leader with 14+ years of experience specializing in AI-driven solutions (OpenAI GPT, Anthropic Claude), cloud architecture (Azure, GCP, AWS), and managing high-performing global teams. [cite: 5, 7, 13, 35]</p>
-</section>
+<div class="container">
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Seasoned, motivated, and empathetic Software Engineering Leader with 14+ years of experience[cite: 5]. Expert in managing global teams, full-stack development, and cloud architecture[cite: 5]. Proven track record in driving digital transformation and leveraging AI models like OpenAI GPT and Anthropic Claude for intelligent automation[cite: 7].</p>
+    </section>
 
-<section class="section">
-    <h2>Core Expertise</h2>
-    <div class="grid">
-        <div class="skill-box">
-            <strong>AI & Automation</strong>
+    <section>
+        <h2>Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-cat">
+                <strong>AI & ML Integration</strong><br>
+                GPT & Claude Models, Azure AI/ML, GitHub CoPilot, Claude Code, AI Agents[cite: 11].
+            </div>
+            <div class="skill-cat">
+                <strong>Development Stack</strong><br>
+                .NET Core, C#, Angular, Node.js, ReactJS, GoLang, TypeScript[cite: 12].
+            </div>
+            <div class="skill-cat">
+                <strong>Cloud & DevOps</strong><br>
+                Azure, GCP, AWS, Kubernetes, Docker, Terraform, CI/CD (Azure DevOps, Bamboo)[cite: 13, 15].
+            </div>
+            <div class="skill-cat">
+                <strong>Architecture & Data</strong><br>
+                Microservices, Event Driven Architecture, Snowflake, MongoDB, SQL Server[cite: 15, 16].
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <span>Senior Engineering Tech Lead</span>
+                <span>Aug 2023 – Present</span>
+            </div>
+            <span class="company">Compass International Holdings, Plano, TX</span>
             <ul>
-                <li>Agentic AI Integration (GPT/Claude) [cite: 11]</li>
-                <li>$2.6M cost savings via AI document extraction [cite: 28]</li>
-                <li>GitHub Copilot & Claude Code [cite: 11, 56]</li>
+                <li>Led global team of 20+ Developers and QA across onshore, offshore, and near-shore locations[cite: 21, 35].</li>
+                <li>Managed AI-driven document extraction using GPT and Claude, achieving $2.6M in cost savings[cite: 28].</li>
+                <li>Spearheaded migration of legacy BizTalk processes to Azure serverless, reducing annual costs by $200K[cite: 33].</li>
+                <li>Architected event-driven notification systems using Confluent Kafka for high-scale throughput[cite: 34].</li>
             </ul>
         </div>
-        <div class="skill-box">
-            <strong>Cloud & Architecture</strong>
+
+        <div class="experience-item">
+            <div class="job-header">
+                <span>Senior Project Lead</span>
+                <span>Aug 2021 – Aug 2023</span>
+            </div>
+            <span class="company">Charles Schwab, Westlake, TX</span>
             <ul>
-                <li>Microservices & Event Driven (Kafka) [cite: 15, 34]</li>
-                <li>Azure, AWS, GCP, Kubernetes [cite: 13]</li>
-                <li>Serverless (Azure Functions) [cite: 33]</li>
+                <li>Delivered LIMA analytics platform integrating Google BigQuery for liquidity metrics[cite: 37].</li>
+                <li>Automated manual release processes by migrating Ruby automation to SpecFlow and Bamboo CI/CD[cite: 38].</li>
+                <li>Championed Agile best practices and facilitated cross-team coordination for 10-member global team[cite: 39, 40].</li>
             </ul>
         </div>
-    </div>
-</section>
 
-<section class="section">
-    <h2>Recent Impact</h2>
-    <p><strong>Senior Engineering Tech Lead @ Compass</strong> (2023–Present) [cite: 20]</p>
-    <ul>
-        <li>Led 20+ Developers/QA across global locations to deliver mission-critical web applications. [cite: 21, 35]</li>
-        <li>Spearheaded BizTalk to Azure migration, saving $200K annually. [cite: 33]</li>
-        <li>Architected enterprise-grade APIs for Title & Settlement partners. [cite: 29]</li>
-    </ul>
-</section>
+        <div class="experience-item">
+            <div class="job-header">
+                <span>Technical Lead</span>
+                <span>Sep 2012 – Aug 2021</span>
+            </div>
+            <span class="company">Mindtree Ltd. (USA & India)</span>
+            <ul>
+                <li>Built Trident modernized brokerage platform processing entire deal lifecycles and agent management[cite: 44].</li>
+                <li>Developed ExpressPay for real-time agent payments with Fiserv platform integration[cite: 45].</li>
+                <li>Mentored team members in adopting cloud-first mindsets through hands-on PoCs[cite: 47].</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+        <div class="cert-list">
+            <span class="cert-tag">Microsoft Azure AI Fundamentals (AI-900) [cite: 49]</span>
+            <span class="cert-tag">SAFe Certified Scrum Master [cite: 52]</span>
+            <span class="cert-tag">Google Professional Cloud Developer [cite: 55]</span>
+            <span class="cert-tag">AWS Cloud Practitioner [cite: 54]</span>
+            <span class="cert-tag">GitHub Copilot [cite: 56]</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <p><strong>Bachelor of Engineering - Computer Science</strong> (2008-2012)<br>
+        Visvesvaraya Technological University, India [cite: 59, 60]</p>
+    </section>
+</div>
 
 </body>
 </html>
